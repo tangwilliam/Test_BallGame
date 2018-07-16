@@ -36,9 +36,11 @@ public class Motor : MonoBehaviour {
             dir.Normalize();
         }
 
-        dir = camTrans.forward * dir.magnitude;
+        Vector3 rotatedDir = camTrans.TransformDirection(dir);
+        rotatedDir = new Vector3(rotatedDir.x, 0, rotatedDir.z);
+        rotatedDir = rotatedDir.normalized * dir.magnitude;
 
-        rb.AddForce(dir * moveSpeed);
+        rb.AddForce(rotatedDir * moveSpeed);
 
 
 

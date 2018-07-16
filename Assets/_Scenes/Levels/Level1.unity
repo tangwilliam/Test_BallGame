@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,7 +38,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 201466063}
   - component: {fileID: 201466062}
   - component: {fileID: 201466061}
+  - component: {fileID: 201466066}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -202,6 +203,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201466066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201466060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92038a9ec3f447cb8253387945b1d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightOffset: 3.5
+  behindOffset: 5
+  smoothSpeed: 5
+  targetTrans: {fileID: 897352269}
 --- !u!1 &388398463
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +312,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &440273800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440273798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5990dcb4b10eb436185dc4061992a6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  drag: 1
+  terminalRotationSpeed: 35
 --- !u!1 &523233362
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +431,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0b093cff0462fe64fb3171ea8de02de7, type: 2}
   m_StaticBatchInfo:
@@ -510,6 +541,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26f0315420c43f544b1c5e4d9bbd39a8, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &897352269 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4189769894828096, guid: 26f0315420c43f544b1c5e4d9bbd39a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 897352268}
 --- !u!1 &1013884396
 GameObject:
   m_ObjectHideFlags: 0
