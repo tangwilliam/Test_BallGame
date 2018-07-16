@@ -8,6 +8,8 @@ public class Motor : MonoBehaviour {
     public float drag = 1.0f;
     public float terminalRotationSpeed = 35.0f;
 
+    public Joystick joystick;
+
 
     private Rigidbody rb;
 
@@ -28,13 +30,20 @@ public class Motor : MonoBehaviour {
 
         Vector3 dir = Vector3.zero;
 
+        // Controls From Keyboard
         dir.x = Input.GetAxis("Horizontal");
         dir.z = Input.GetAxis("Vertical");
-
         if( dir.magnitude > 1 )
         {
             dir.Normalize();
         }
+
+        // Controls From JoyStick
+        if( joystick.InputDirection != Vector3.zero ){
+
+            dir = joystick.InputDirection;
+        }
+
 
         Vector3 rotatedDir = camTrans.TransformDirection(dir);
         rotatedDir = new Vector3(rotatedDir.x, 0, rotatedDir.z);

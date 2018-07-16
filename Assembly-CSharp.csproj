@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CamMotor.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Joystick.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Motor.cs" />
