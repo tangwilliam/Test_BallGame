@@ -7,8 +7,10 @@ public class Motor : MonoBehaviour {
     public float moveSpeed = 1.0f;
     public float drag = 1.0f;
     public float terminalRotationSpeed = 35.0f;
-
     public Joystick joystick;
+
+    public float boostSpeed = 10.0f;
+    private float boostCoolDown = 2.0f;
 
 
     private Rigidbody rb;
@@ -54,4 +56,12 @@ public class Motor : MonoBehaviour {
 
 
 	}
+
+    public void Boost()
+    {
+        if( Time.time > boostCoolDown )
+        {
+            rb.AddForce(rb.velocity.normalized * boostSpeed, ForceMode.VelocityChange);
+        }
+    }
 }

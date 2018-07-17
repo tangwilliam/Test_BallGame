@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{F5071018-16A2-B2EB-3DD6-003204DEA300}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Joystick.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/Motor.cs" Line="19" Column="32" />
-      <File FileName="Assets/Scripts/CamMotor.cs" Line="6" Column="5" />
-      <File FileName="Assets/Scripts/LevelManager.cs" Line="13" Column="3" />
-      <File FileName="Assets/Scripts/Joystick.cs" Line="10" Column="18" />
+      <File FileName="Assets/Scripts/Motor.cs" Line="45" Column="13" />
+      <File FileName="Assets/Scripts/CamMotor.cs" Line="71" Column="42" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="32" Column="16" />
+      <File FileName="Assets/Scripts/Joystick.cs" Line="44" Column="38" />
+      <File FileName="Assets/Scripts/FreeCamera.cs" Line="19" Column="18" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="9" Column="30" />
+      <File FileName="Assets/Scripts/WinBox.cs" Line="11" Column="41" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="58" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

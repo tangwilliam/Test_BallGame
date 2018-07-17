@@ -12,6 +12,9 @@ public class MainMenu : MonoBehaviour {
     public GameObject ThemeTexturePrefab;
     public GameObject ThemeTexturesContainer;
 
+    public Text currencyText;
+
+
     public Material PlayerMaterial;
 
     public float cameraLookAtSpeed = 3.0f;
@@ -23,6 +26,9 @@ public class MainMenu : MonoBehaviour {
 	void Start () {
 
         ChangePlayerSkin(0);
+
+        Debug.Log("Main Menu Start()" + GameManager.Instance.Currency );
+        currencyText.text = "Currency = " + GameManager.Instance.Currency.ToString();
 
         Sprite[] sprites = Resources.LoadAll<Sprite>("Levels");
         foreach( Sprite sp in sprites)
